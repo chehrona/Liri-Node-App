@@ -44,7 +44,7 @@ let concertRequest = function(name) {
                 console.log("Event date:", moment(item.datetime).format("MM/DD/YYYY"));
                 console.log("-----------------------------------------------");
                 
-                textToLog += "Venue name: " + item.venue.name + "\n" + "Venue location: " + item.venue.location + "\n" + "Event date: " + moment(item.datetime).format("MM/DD/YYYY") + "\n" + "-----------------------------------------------" + "\n";
+                textToLog += "Venue name: " + item.venue.name + "\n" + "Venue location: " + item.venue.location + "\n" + "Event date: " + moment(item.datetime).format("MM/DD/YYYY") + "\n" + "-----------------------------------------------\n";
             }
             logToFile(textToLog);
         })
@@ -86,7 +86,7 @@ let songRequest = function(name) {
         console.log("Preview Link:", tracksArr[i].preview_url);
         console.log("Album:", tracksArr[i].album.name);
         console.log("--------------------------------------------------------------");
-        textToLog += "Song name: " + tracksArr[i].name + "\n" + "Artists: " + artistNames + "\n" + "Preview Link: " + tracksArr[i].preview_url + "\n" + "Album: " + tracksArr[i].album.name + "\n" + "--------------------------------------------------------------";
+        textToLog += "Song name: " + tracksArr[i].name + "\n" + "Artists: " + artistNames + "\n" + "Preview Link: " + tracksArr[i].preview_url + "\n" + "Album: " + tracksArr[i].album.name + "\n" + "--------------------------------------------------------------\n";
     }
     logToFile(textToLog);
 })
@@ -112,7 +112,7 @@ let movieRequest = function(name) {
         console.log("Plot:", response.data.Plot);
         console.log("Actors:", response.data.Actors);
         
-        textToLog = "********** Movie Information Request **********\n\n" + 'Title: ' + response.data.Title + "\n" + 'Release year: ' + response.data.Year + "\n" + "IMDB rating: " + response.data.Ratings[0].Value + "\n" + "Rotten Tomatoes rating: " + response.data.Ratings[1].Value + "\n" + "Country: " + response.data.Country + "\n" + "Language: " + response.data.Language + "\n" + "Plot: " + response.data.Plot + "\n" + "Actors: " + response.data.Actors + "\n" + "--------------------------------------------------------------";
+        textToLog = "********** Movie Information Request **********\n\n" + 'Title: ' + response.data.Title + "\n" + 'Release year: ' + response.data.Year + "\n" + "IMDB rating: " + response.data.Ratings[0].Value + "\n" + "Rotten Tomatoes rating: " + response.data.Ratings[1].Value + "\n" + "Country: " + response.data.Country + "\n" + "Language: " + response.data.Language + "\n" + "Plot: " + response.data.Plot + "\n" + "Actors: " + response.data.Actors + "\n" + "--------------------------------------------------------------\n";
 
         logToFile(textToLog);
     })
